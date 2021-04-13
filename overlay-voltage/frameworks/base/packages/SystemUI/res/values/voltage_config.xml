@@ -35,4 +35,7 @@
         of waking the screen while the screen is off or in lpm. -->
     <bool name="config_pulseOnFingerDown">true</bool>
 
+    <!-- FPSInfoService Fps file path -->
+    <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/card0/sde-crtc-0/measured_fps</string>
+
 </resources>
