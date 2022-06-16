@@ -26,3 +26,7 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1
 
 # FPS Info
 genfscon sysfs /class/drm/card0/sde-crtc-0/measured_fps                                                                                                             u:object_r:vendor_sysfs_graphics:s0
+
+# KProfiles
+genfscon sysfs /module/kprofiles/parameters/auto_kprofiles u:object_r:sysfs_kprofiles:s0
+genfscon sysfs /module/kprofiles/parameters/kp_mode u:object_r:sysfs_kprofiles:s0

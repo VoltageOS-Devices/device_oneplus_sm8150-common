@@ -13,3 +13,6 @@ allow op1_file self:filesystem associate;
 # Allow init to read and write to vendor_sysfs_graphics
 allow init vendor_sysfs_graphics:dir search;
 allow init vendor_sysfs_graphics:file rw_file_perms;
+
+# Allow init to set attribute to sysfs_kprofiles
+allow init sysfs_kprofiles:file { setattr };
