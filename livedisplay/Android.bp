@@ -14,13 +14,17 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.oneplus_msmnile",
-    init_rc: ["vendor.lineage.touch@1.0-service.oneplus_msmnile.rc"],
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.oneplus_msmnile.xml"],
+    name: "vendor.lineage.livedisplay@2.1-service.oneplus_msmnile",
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.oneplus_msmnile.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay@2.1-service.oneplus_msmnile.xml"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
-        "TouchscreenGesture.cpp",
+        ":vendor.lineage.livedisplay@2.0-sdm-pa",
+        ":vendor.lineage.livedisplay@2.0-sdm-utils",
+        ":vendor.lineage.livedisplay@2.1-oneplus-af",
+        ":vendor.lineage.livedisplay@2.1-oneplus-se",
+        "DisplayModes.cpp",
         "service.cpp",
     ],
     shared_libs: [
@@ -28,7 +32,12 @@ cc_binary {
         "libbinder",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.touch@1.0",
+        "vendor.lineage.livedisplay@2.0",
+        "vendor.lineage.livedisplay@2.1",
+    ],
+    header_libs: [
+        "vendor.lineage.livedisplay@2.0-sdm-headers",
+        "vendor.lineage.livedisplay@2.1-oneplus-headers",
     ],
     proprietary: true,
 }

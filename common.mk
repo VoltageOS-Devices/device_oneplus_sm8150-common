@@ -328,6 +328,13 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_softomx.vendor
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk
+
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
@@ -384,11 +391,11 @@ PRODUCT_COPY_FILES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus_msmnile
+    vendor.lineage.touch@1.0-service.oneplus
 
 # tri-state key
 PRODUCT_PACKAGES += \
-    tri-state-key_daemon
+    tri-state-key_daemon.vendor
 
 # Update engine
 PRODUCT_PACKAGES += \
