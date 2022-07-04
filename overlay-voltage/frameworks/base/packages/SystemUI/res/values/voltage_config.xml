@@ -29,8 +29,19 @@
             0 - GLOBAL HBM 
             1 - LOCAL HBM
     -->
-    <integer name="config_udfps_hbm_type">0</integer>
+    <integer name="config_udfpsHbmType">0</integer>
 
     <!-- Udfps vendor code -->
     <integer name="config_udfps_vendor_code">0</integer>
+
+    <!-- The radius of the enrollment progress bar, in dp -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">100</integer>
+
+    <!-- Whether to pulse onFingerDown actions instead
+        of waking the screen while the screen is off or in lpm. -->
+    <bool name="config_pulseOnFingerDown">true</bool>
+
+    <!-- Whether to disable Night Light feature during UDFPS unlock -->
+    <bool name="config_udfpsDisableNightLight">true</bool>
+
 </resources>
